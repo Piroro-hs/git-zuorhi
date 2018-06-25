@@ -1,7 +1,7 @@
 const {spawn} = require('child_process');
 const readline = require('readline');
 
-const {detect} = require('./conflict');
+const {detecter} = require('./conflict');
 
 if (
   process.argv[2] === 'merge' ||
@@ -11,11 +11,12 @@ if (
     !process.argv.slice(3).includes('--interactive'))
 ) {
   const git = spawn('git', process.argv.slice(2), {stdio: [0, 'pipe', 2]});
-  const rl = readline.createInterface({
+  detecter(readline.createInterface({
     input: git.stdout,
     output: process.stdout
+  })).once('conflict', () => {
+    console.log('conflict');
   });
-  rl.on('line', detect);
 } else {
   spawn('git', process.argv.slice(2), {stdio: 'inherit'});
 }
