@@ -1,7 +1,7 @@
 const {spawn} = require('child_process');
 const readline = require('readline');
 
-const {detecter} = require('./conflict');
+const {detecter, play} = require('./conflict');
 
 if (
   process.argv[2] === 'merge' ||
@@ -15,7 +15,7 @@ if (
     input: git.stdout,
     output: process.stdout
   })).once('conflict', () => {
-    console.log('conflict');
+    play();
   });
 } else {
   spawn('git', process.argv.slice(2), {stdio: 'inherit'});
