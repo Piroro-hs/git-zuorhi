@@ -1,14 +1,20 @@
 {
-  "name": "nanika",
+  "name": "git-zuorhi",
   "version": "1.0.0",
-  "description": "",
+  "description": "ズォールヒーｗｗｗヴィヤーンタースｗｗｗワースｗｗｗフェスツｗｗｗルオルｗｗｗプローイｗｗｗ",
+  "homepage": "https://github.com/Piroro-hs/git-zuorhi#readme",
+  "bugs": "https://github.com/Piroro-hs/git-zuorhi/issues",
+  "repository": "Piroro-hs/git-zuorhi",
+  "license": "MIT",
+  "author": "Piroro-hs",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "bin": "index.js",
-  "license": "MIT",
   "dependencies": {
     "puppeteer": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=8.11.3"
   }
 }
