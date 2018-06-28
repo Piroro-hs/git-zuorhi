@@ -2,11 +2,11 @@
   "name": "nanika",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  "bin": "index.js",
   "license": "MIT",
   "dependencies": {
     "puppeteer": "^1.5.0"
